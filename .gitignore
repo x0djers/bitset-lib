@@ -1,0 +1,12 @@
+build/
+docs/
+.idea
+*.o
+*.swp
+*.log
+*.out
+*.a
+*.so
+*.gcda
+*.gcno
+*.gcov
