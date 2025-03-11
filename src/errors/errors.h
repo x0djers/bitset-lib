@@ -1,0 +1,29 @@
+#ifndef ERRORS_H
+#define ERRORS_H
+
+typedef enum {
+    NONE_ERROR,
+    MEMORY_ALLOCATION_ERROR,
+    CAPACITY_EXCEEDING_ERROR,
+    NEGATIVE_NUMBER_ERROR,
+} BaseErrorCode;
+
+typedef enum {
+    BOUNDARY_TEST_ERROR,
+    ADD_TEST_ERROR,
+    ADD_MANY_TEST_ERROR,
+    REMOVE_TEST_ERROR,
+    SUBSET_TEST_ERROR,
+    STRICT_SUBSET_TEST_ERROR,
+    UNION_TEST_ERROR,
+    INTERSECTION_TEST_ERROR,
+    DIFFERENCE_TEST_ERROR,
+    SYMMETRIC_DIFFERENCE_TEST_ERROR,
+    COMPLEMENT_TEST_ERROR,
+
+} TestErrorCode;
+
+char *getBaseErrorMessage(BaseErrorCode code);
+char *getTestErrorMessage(TestErrorCode code);
+
+#endif
