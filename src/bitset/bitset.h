@@ -61,6 +61,26 @@ void destroyBitSet(BitSet *bitSet);
            - An error code if the element could not be added
              (e.g., due to being negative or out of range).
 */
+BaseErrorCode addBitSetElement(const BitSet *bitSet, uint64_t element);
+
+/*
+  @brief Adds several numbers in set if they are positive and permissible,
+         otherwise passes them.
+
+  This function attempts to add multiple elements to the provided BitSet.
+  Each element is checked for validity (i.e., it must be positive and
+  permissible based on some criteria) before it is added to the BitSet.
+  If an element is not valid, it is ignored.
+
+  @param bitSet A pointer to the BitSet structure where elements will be added.
+  @param count The number of elements to be added to the BitSet.
+  @param elements An array of elements to be added to the BitSet.
+
+  @return A `BaseErrorCode` indicating the result of the operation:
+           - `NONE_ERROR` if the element was successfully added.
+           - An error code if the element could not be added
+             (e.g., due to being negative or out of range).
+*/
 BaseErrorCode addManyBitSetElements(const BitSet *bitSet, size_t count,
 									const uint64_t elements[]);
 
